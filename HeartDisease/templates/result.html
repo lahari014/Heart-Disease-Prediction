@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Hospital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family:'Lobster';
+  color:white;
+}
+
+img{
+    border-radius:20px;
+    height:400px;
+    width:500px;
+}
+.heart-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    background-color:#1C315E;
+    height:94vh;
+    border-radius:20px;
+}
+.head{
+  font-size:35px;
+}
+.para{
+  font-size:30px;
+}
+li{
+  font-size:25px;
+}
+.header{
+  font-size:30px;
+}
+.but{
+  color:black;
+  border-width:0px;
+  font-weight:bold;
+  font-size:20px;
+  font-family:'sans-serif';
+  text-align:right;
+  background-color:transparent;
+}
+.but-card{
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+a{
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+i{
+  font-size:10px;
+}
+</style>
+</head>
+<body>
+  
+  
+  {% if prediction == 1%}
+  <div class="but-card">
+    <button class="but">
+      <a href="/form">Back<i class="fa fa-arrow-right"></i></a>
+    </button>
+  </div>
+  <div class="heart-card">
+    <div>
+      <h1 class="header" style="color:red;">Sorry to say, chances of having Heart disease is more, please consult a Doctor.</h1>
+      <p class="para">But, You also neet to follow some precautions after consulting doctor....</p>
+      <ul>
+        <li>Stop smoking</li>
+        <li>Control your cholesterol levels</li>
+        <li>Check for diabetes</li>
+        <li>Eat a heart-healthy diet</li>
+        <li>Control your stress level</li>
+      </ul>
+    </div>
+    <div>
+      <img src="https://cardiacsecondopinion.com/wp-content/uploads/2020/12/Featured.png" alt="HTML" width="450" height="350">
+    </div>
+  </div>
+  {% elif prediction == 0%}
+  <div class="but-card">
+    <button class="but">
+      <a href="/form">Back<i class="fa fa-arrow-right"></i></a>
+    </button>
+  </div>
+  <div class="heart-card">
+    <div>
+      <h1 style="color:#F94892;font-family:'sans-serif';"><span style="color:#FFDE00;">No Worries!!!</span>You don't have Heart disease.</h1>
+      <p style="text-align:center;"></p>
+      <img src="https://media.istockphoto.com/id/955771066/photo/woman-hands-in-yellow-sweater-holding-pink-heart.jpg?b=1&s=170667a&w=0&k=20&c=Gt0s49AEsvULqgzfs01cehIeyuNT3FI8PN9pdK3FfEc=" alt="HTML" width="350" height="250"></p>
+    </div>
+    <div>
+      <h1 class="head">But be Cautious my Friend!</h1>
+      <p class="para">Here are the precautions u need to take....</p>
+      <ul class="list-container">
+        <li>Eat a healthy, balanced diet</li>
+        <li>Be more physically active</li>
+        <li>Keep to a healthy weight</li>
+        <li>Give up smoking</li>
+        <li>Reduce your alcohol consumption</li>
+        <li>Keep your blood pressure under control</li>
+      </ul>
+    </div>
+  </div>
+  
+	{% endif %}
+
+ 
+  
+  </body>
+  </html>
